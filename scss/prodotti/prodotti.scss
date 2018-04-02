@@ -1,0 +1,127 @@
+@import "../mixins";
+@import "../responsive";
+@import "mixprodotti";
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300');
+
+@font-face {
+    font-family: 'productsans';
+    src: url('../ProductSans/Product Sans Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    @include body;
+}
+
+.header {
+    @include header;
+}
+
+.menu-phone {
+    @include phoneMenu;
+}
+
+.footer {
+    @include footer;
+}
+
+.no_overflow {
+  overflow: hidden;
+}
+
+div.logo:hover {
+  cursor: pointer;
+}
+
+.first-div-products {
+
+  background-image: url("../images/back_prodotti.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 300px 0px;
+  @include mediaQuery(420px) {
+    background-position-x: 47%;
+  }
+
+  .sub-first-div-products {
+
+    h2 {
+      text-align: center;
+      font-size: 60px;
+      color: #fff;
+      font-family: Roboto;
+      @include mediaQuery(420px) {
+        margin-top: -20px;
+      }
+    }
+  }
+}
+
+.second-div-products {
+
+  .sub-second-div-products {
+
+    padding: 100px 0px;
+
+    .sec-div-prod-details {
+
+      width: 80%;
+      margin: 0% 10%;
+      padding-bottom: 50px;
+      border: 1px solid;
+      border-radius: 4px;
+
+      h5 {
+        font-size: 25px;
+        font-family: Roboto;
+        text-align: center;
+      }
+      p {
+        font-size: 18px;
+        font-family: Roboto;
+        display: inline-block;
+        line-height: 50px;
+        padding-top: 100px;
+        vertical-align: top;
+        margin-left: 16%;
+        margin-right: 5%;
+        @include mediaQuery(420px) {
+          display: block;
+          padding: 0px;
+          line-height: 30px;
+          padding-bottom: 30px;
+        }
+      }
+      img {
+        height: 400px;
+        width: 20%;
+        display: inline-block;
+        @include mediaQuery(420px) {
+          height: 300px;
+          width: 70%;
+          margin: 0% 15%;
+          display: block;
+        }
+      }
+    }
+    button {
+      width: 15%;
+      padding: 10px 0px;
+      font-size: 20px;
+      margin: 0% 43%;
+      margin-top: 20px;
+      background-color: #00b4ff;
+      border: 1px solid #00b4ff;
+      border-radius: 3px;
+      color: #fff;
+      @include mediaQuery(420px) {
+        width: 50%;
+        margin: 0% 25%;
+        margin-top: 30px;
+      }
+    }
+  }
+}

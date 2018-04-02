@@ -1,0 +1,134 @@
+@import "../mixins";
+@import "../responsive";
+@import "mixchisiamo";
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300');
+
+@font-face {
+    font-family: 'productsans';
+    src: url('../ProductSans/Product Sans Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    @include body;
+}
+
+.header {
+    @include header;
+}
+
+.menu-phone {
+    @include phoneMenu;
+}
+
+.footer {
+    @include footer;
+}
+
+.no_overflow {
+  overflow: hidden;
+}
+
+div.logo:hover {
+  cursor: pointer;
+}
+
+.first-div-image {
+    background-image: url("../images/back_first_who3.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 300px 0px;
+    @include mediaQuery(420px) {
+      background-position-x: 47%;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 60px;
+      color: #fff;
+      font-family: Roboto;
+      @include mediaQuery(420px) {
+        margin-top: -20px;
+      }
+    }
+}
+
+.member {
+  padding: 100px 0px;
+  background-image: url("../images/face.png"), linear-gradient(to bottom left, #595959, #0D0D0D);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 80%;
+
+  @include mediaQuery(420px) {
+    padding: 50px 0px;
+  }
+
+  @include backResp;
+
+  div {
+    padding-left: 20%;
+    @include mediaQuery(420px) {
+      padding: 0px 10px;
+    }
+
+    @include imgMemb;
+
+    h4, h6, p {
+      margin: 0px;
+      font-family: Roboto;
+      color: #fff;
+    }
+    h4 {
+      font-size: 25px;
+    }
+    h6 {
+      font-size: 18px;
+      font-weight: normal;
+    }
+    p {
+      max-width: 40%;
+      font-size: 15px;
+      @include mediaQuery(420px) {
+        max-width: 90%;
+        margin: auto;
+      }
+    }
+    h6, h4, p {
+      @include mediaQuery(420px) {
+        text-align: center;
+      }
+    }
+  }
+}
+div.member:nth-child(2), div.member:nth-child(4) {
+  background-image: url("../images/face.png"), linear-gradient(to top right, #595959, #0D0D0D);
+  background-position: 30%;
+
+  @include backResp;
+
+  div {
+    padding-left: 60%;
+    @include mediaQuery(420px) {
+      padding: 0px 10px;
+    }
+
+    @include imgMemb;
+
+    p {
+      max-width: 80%;
+      @include mediaQuery(420px) {
+        max-width: 90%;
+        margin: auto;
+      }
+    }
+    h6, h4, p {
+      @include mediaQuery(420px) {
+        text-align: center;
+      }
+    }
+  }
+}

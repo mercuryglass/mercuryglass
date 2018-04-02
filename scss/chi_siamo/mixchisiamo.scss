@@ -1,0 +1,17 @@
+@mixin imgMemb {
+    img {
+        display: none;
+        @include mediaQuery(420px) {
+          display: block;
+          width: 60%;
+          margin: 10% 20%;
+        }
+    }
+}
+@mixin backResp {
+    @include mediaQuery(420px) {
+        background-image: none;
+        background: linear-gradient(to top right, #595959, #0D0D0D);
+        background-position: 0%;
+    }
+}
