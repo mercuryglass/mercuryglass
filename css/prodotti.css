@@ -50,7 +50,8 @@ body {
         .header .sub-header .logo {
           background-image: url("../images/drop.png");
           padding: 20px;
-          bottom: 10px; } }
+          bottom: 10px;
+          margin-left: 18%; } }
       .header .sub-header .logo span {
         margin-left: 18%;
         font-size: 28px;
@@ -178,7 +179,7 @@ div.logo:hover {
   cursor: pointer; }
 
 .first-div-products {
-  background-image: url("../../images/back_prodotti.jpg");
+  background-image: url("../images/back_prodotti.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
