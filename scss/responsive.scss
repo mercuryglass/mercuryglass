@@ -1,5 +1,5 @@
 @mixin mediaQuery ($width) {
-  @if $width < 1025 {
+  @if $width < 1141 {
     @media screen and (max-width: $width) {
       @content;
     }

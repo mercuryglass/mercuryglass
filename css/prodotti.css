@@ -19,39 +19,58 @@ body {
     .header .sub-header .menu {
       display: none;
       color: #fff; }
-      @media screen and (max-width: 420px) {
+      @media screen and (min-width: 320px) {
         .header .sub-header .menu {
           margin-left: 30%;
-          display: inline; } }
+          display: inline-block; } }
+      @media screen and (min-width: 540px) {
+        .header .sub-header .menu {
+          margin-left: 15%; } }
+      @media screen and (min-width: 960px) {
+        .header .sub-header .menu {
+          display: none; } }
       .header .sub-header .menu .fa-bars:hover {
         cursor: pointer; }
-    .header .sub-header .logo, .header .sub-header .options {
-      display: inline; }
-      .header .sub-header .logo span a, .header .sub-header .options span a {
-        text-decoration: none;
-        color: #fff; }
-      .header .sub-header .logo span a:hover, .header .sub-header .options span a:hover {
-        text-decoration: none; }
-      .header .sub-header .logo span a:active, .header .sub-header .options span a:active {
-        color: #fff;
-        text-decoration: none; }
+    .header .sub-header .logo span a, .header .sub-header .options span a {
+      text-decoration: none;
+      color: #fff; }
+    .header .sub-header .logo span a:hover, .header .sub-header .options span a:hover {
+      text-decoration: none; }
+    .header .sub-header .logo span a:active, .header .sub-header .options span a:active {
+      color: #fff;
+      text-decoration: none; }
     .header .sub-header .logo {
-      background-image: url("../images/logo.png");
       background-size: contain;
-      padding: 20px;
       background-repeat: no-repeat;
-      margin-left: 15%;
       position: relative;
-      bottom: 3px; }
-      @media screen and (max-width: 1024px) {
-        .header .sub-header .logo {
-          margin-left: 5%; } }
-      @media screen and (max-width: 420px) {
+      display: inline; }
+      @media screen and (min-width: 320px) {
         .header .sub-header .logo {
           background-image: url("../images/drop.png");
+          margin-left: 15%;
           padding: 20px;
-          bottom: 10px;
-          margin-left: 18%; } }
+          bottom: 10px; } }
+      @media screen and (min-width: 540px) {
+        .header .sub-header .logo {
+          background-image: url("../images/logo.png");
+          padding: 55px;
+          background-position-y: 50%;
+          margin-left: 15%; } }
+      @media screen and (min-width: 720px) {
+        .header .sub-header .logo {
+          padding: 50px;
+          position: relative;
+          margin-left: 20%;
+          background-position-y: 45%; } }
+      @media screen and (min-width: 960px) {
+        .header .sub-header .logo {
+          margin-left: 4%;
+          padding: 20px;
+          top: unset;
+          bottom: 3px; } }
+      @media screen and (min-width: 1140px) {
+        .header .sub-header .logo {
+          margin-left: 5%; } }
       .header .sub-header .logo span {
         margin-left: 18%;
         font-size: 28px;
@@ -62,13 +81,25 @@ body {
           .header .sub-header .logo span {
             margin-left: 10%;
             font-size: 45px; } }
+    .header .sub-header .logo:hover {
+      cursor: pointer; }
     .header .sub-header .options {
       margin-left: 30%; }
-      @media screen and (max-width: 420px) {
+      @media screen and (min-width: 320px) {
         .header .sub-header .options {
           display: none; } }
+      @media screen and (min-width: 960px) {
+        .header .sub-header .options {
+          display: inline-block;
+          width: 60%;
+          margin-left: 12%; } }
+      @media screen and (min-width: 1140px) {
+        .header .sub-header .options {
+          margin-left: 20%;
+          width: 50%;
+          text-align: center; } }
       .header .sub-header .options span {
-        margin: 0% 1%;
+        margin: 0% 4%;
         font-size: 20px;
         font-family: Roboto;
         font-weight: 100;
@@ -136,20 +167,26 @@ body {
   .footer .sub-footer {
     padding: 30px 0px; }
     .footer .sub-footer .all-icon-soc {
-      width: 30%;
       text-align: center;
       margin: auto;
       padding: 30px 0px; }
-      @media screen and (max-width: 1024px) {
-        .footer .sub-footer .all-icon-soc {
-          width: 30%; } }
-      @media screen and (max-width: 420px) {
+      @media screen and (min-width: 320px) {
         .footer .sub-footer .all-icon-soc {
           text-align: center;
+          margin: 0% 10%;
+          width: 80%; } }
+      @media screen and (min-width: 1140px) {
+        .footer .sub-footer .all-icon-soc {
           width: 80%; } }
       .footer .sub-footer .all-icon-soc .single-icon-soc {
         display: inline-table;
         margin: 0% 10%; }
+        @media screen and (min-width: 320px) {
+          .footer .sub-footer .all-icon-soc .single-icon-soc {
+            margin: 0% 10%; } }
+        @media screen and (min-width: 720px) {
+          .footer .sub-footer .all-icon-soc .single-icon-soc {
+            margin: 0% 8%; } }
         .footer .sub-footer .all-icon-soc .single-icon-soc span {
           color: #fff; }
     .footer .sub-footer .footer-info {
@@ -157,10 +194,13 @@ body {
       font-family: Roboto; }
       .footer .sub-footer .footer-info p {
         color: #fff; }
-        @media screen and (max-width: 420px) {
+        @media screen and (min-width: 320px) {
           .footer .sub-footer .footer-info p span {
             display: block;
             line-height: 30px; } }
+        @media screen and (min-width: 720px) {
+          .footer .sub-footer .footer-info p span {
+            display: unset; } }
         @media screen and (max-width: 420px) {
           .footer .sub-footer .footer-info p span b {
             display: none; } }
@@ -218,22 +258,44 @@ div.logo:hover {
       vertical-align: top;
       margin-left: 16%;
       margin-right: 5%; }
-      @media screen and (max-width: 420px) {
+      @media screen and (min-width: 320px) {
         .second-div-products .sub-second-div-products .sec-div-prod-details p {
           display: block;
           padding: 0px;
           line-height: 30px;
           padding-bottom: 30px; } }
+      @media screen and (min-width: 540px) {
+        .second-div-products .sub-second-div-products .sec-div-prod-details p {
+          margin: 0%;
+          text-align: center; } }
     .second-div-products .sub-second-div-products .sec-div-prod-details img {
-      height: 400px;
       width: 20%;
       display: inline-block; }
-      @media screen and (max-width: 420px) {
+      @media screen and (min-width: 320px) {
         .second-div-products .sub-second-div-products .sec-div-prod-details img {
           height: 300px;
           width: 70%;
           margin: 0% 15%;
           display: block; } }
+      @media screen and (min-width: 540px) {
+        .second-div-products .sub-second-div-products .sec-div-prod-details img {
+          height: 400px;
+          width: 60%;
+          margin: 0% 20%; } }
+      @media screen and (min-width: 720px) {
+        .second-div-products .sub-second-div-products .sec-div-prod-details img {
+          height: 500px; } }
+      @media screen and (min-width: 960px) {
+        .second-div-products .sub-second-div-products .sec-div-prod-details img {
+          width: 45%; } }
+      @media screen and (min-width: 960px) {
+        .second-div-products .sub-second-div-products .sec-div-prod-details img {
+          margin: 0% 27%; } }
+      @media screen and (min-width: 1140px) {
+        .second-div-products .sub-second-div-products .sec-div-prod-details img {
+          height: 550px;
+          width: 400px;
+          margin: 0% auto; } }
   .second-div-products .sub-second-div-products button {
     width: 15%;
     padding: 10px 0px;
@@ -244,10 +306,15 @@ div.logo:hover {
     border: 1px solid #00b4ff;
     border-radius: 3px;
     color: #fff; }
-    @media screen and (max-width: 420px) {
+    @media screen and (min-width: 320px) {
       .second-div-products .sub-second-div-products button {
         width: 50%;
         margin: 0% 25%;
         margin-top: 30px; } }
+    @media screen and (min-width: 540px) {
+      .second-div-products .sub-second-div-products button {
+        width: 30%;
+        margin: 0% 35%;
+        margin-top: 5%; } }
 
 /*# sourceMappingURL=prodotti.css.map */

@@ -57,22 +57,29 @@ div.logo:hover {
 }
 
 .member {
-  padding: 100px 0px;
-  background-image: url("../images/face.png"), linear-gradient(to bottom left, #595959, #0D0D0D);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 80%;
 
-  @include mediaQuery(420px) {
-    padding: 50px 0px;
+  @media screen and (min-width: 320px) {
+    padding: 20px 0px;
   }
 
   @include backResp;
 
+  @media screen and (min-width: 1140px) {
+    background-image: url("../images/face.png"), linear-gradient(to bottom left, #595959, #0D0D0D);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 80%;
+    padding: 100px 0px;
+  }
+
   div {
     padding-left: 20%;
-    @include mediaQuery(420px) {
+    @media screen and (min-width: 320px) {
       padding: 0px 10px;
+    }
+    @media screen and (min-width: 1140px) {
+      width: 40%;
+      margin-left: 8%;
     }
 
     @include imgMemb;
@@ -92,41 +99,50 @@ div.logo:hover {
     p {
       max-width: 40%;
       font-size: 15px;
-      @include mediaQuery(420px) {
+      @media screen and (min-width: 320px) {
         max-width: 90%;
         margin: auto;
       }
     }
     h6, h4, p {
-      @include mediaQuery(420px) {
+      @media screen and (min-width: 320px) {
         text-align: center;
       }
     }
   }
 }
 div.member:nth-child(2), div.member:nth-child(4) {
-  background-image: url("../images/face.png"), linear-gradient(to top right, #595959, #0D0D0D);
-  background-position: 30%;
 
   @include backResp;
 
+  @media screen and (min-width: 1140px) {
+    background-image: url("../images/face.png"), linear-gradient(to top right, #595959, #0D0D0D);
+    background-position: 20%;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
   div {
     padding-left: 60%;
-    @include mediaQuery(420px) {
+    @media screen and (min-width: 320px) {
       padding: 0px 10px;
+    }
+    @media screen and (min-width: 1140px) {
+      width: 40%;
+      margin-left: 50%;
     }
 
     @include imgMemb;
 
     p {
       max-width: 80%;
-      @include mediaQuery(420px) {
+      @media screen and (min-width: 320px) {
         max-width: 90%;
         margin: auto;
       }
     }
     h6, h4, p {
-      @include mediaQuery(420px) {
+      @media screen and (min-width: 320px) {
         text-align: center;
       }
     }
